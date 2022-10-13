@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luck Game</title>
+    <style>
+      form {
+        display: inline;
+      }
+      .container {
+        width: 90%;
+        margin: auto;
+        padding: 20px 5px 20px 50px;
+        background-color: #ffc6f2;
+      }
+      .tossMsg,
+      .valid {
+        color: rgb(57, 13, 255);
+      }
+      .ws {
+        font-weight: bolder;
+        font-size: 20px;
+      }
+      .winer {
+        color: rgb(57, 13, 255);
+      }
+      #toss {
+        background-color: yellow;
+      }
+      #toss:disabled {
+        background-color: rgb(120, 120, 116);
+      }
+      .player {
+        background-color: rgb(0, 69, 245);
+        color: white;
+      }
+      #reset {
+        background-color: red;
+      }
+      :disabled {
+        background-color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Let's Play a Luck Game Like Ludo</h1>
+      <h3>*Rules</h3>
+      <ol>
+        <li>Toss before playing.</li>
+        <li>You can define winning score manually.</li>
+        <li>You can turn your dice again if it be 6.</li>
+        <li>Your score won't increase if it exceeds the winning score.</li>
+        <li>Your score must to be equal to the winning score</li>
+      </ol>
+      <p class="tossMsg">Toss before start playing</p>
+      <button id="toss">Toss</button>
+      <h3>
+        Player 1:
+        <span id="p1score">0</span>
+        <span class="winer"></span>
+        <br /><br />
+        Player 2:<span id="p2score">0</span>
+        <span class="winer"></span>
+      </h3>
+      <p class="ws">Wining Score is: <span></span></p>
+      <h3 class="dice">Dice: <span></span></h3>
+      <form action="">
+        <input type="number" id="tScore" />
+        <button id="submit">Submit</button>
+      </form>
+      <button id="reset">Reset</button> <br />
+      <p class="valid"></p>
+      <button id="p1btn" class="player">Player 1</button>
+      <button id="p2btn" class="player">Player 2</button>
+    </div>
+    <script src="project-1.js"></script>
+  </body>
+</html>
